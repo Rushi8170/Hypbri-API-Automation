@@ -33,14 +33,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Compiling project..."
-                sh 'mvn clean compile -DskipTests'
+                bat 'mvn clean compile -DskipTests'
             }
         }
 
         stage('Execute Tests') {
             steps {
                 echo "Running test suite: ${params.TEST_SUITE} on ${params.ENVIRONMENT}"
-                sh """
+                bat """
                     mvn clean test -P${params.TEST_SUITE} \
                         -Denv=${params.ENVIRONMENT}
                 """
