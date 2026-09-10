@@ -1,0 +1,65 @@
+2026-09-10 12:45:17 [main] INFO  com.framework.config.ConfigManager - Loading config: src/main/resources/config/config-qa.properties
+2026-09-10 12:45:19 [main] INFO  com.framework.listeners.TestListener - ===== Suite started: Regression Suite =====
+2026-09-10 12:45:19 [main] INFO  com.framework.listeners.ExtentReportManager - Extent report initialised at: reports/ExtentReport.html
+2026-09-10 12:45:20 [main] INFO  com.framework.tests.api.BaseAPITest - API Base URI: https://reqres.in/api
+2026-09-10 12:45:20 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testCreateUser
+2026-09-10 12:45:20 [main] INFO  com.framework.api.client.RestClient - POST https://reqres.in/api/users
+2026-09-10 12:45:37 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=201, actual=201
+2026-09-10 12:45:38 [main] INFO  com.framework.api.validators.ResponseValidator - Key 'id' found with value: 648
+2026-09-10 12:45:38 [main] INFO  com.framework.api.validators.ResponseValidator - Validating 'name': expected='Leonel', actual='Leonel'
+2026-09-10 12:45:38 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testCreateUser
+2026-09-10 12:45:38 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testDeleteUser
+2026-09-10 12:45:38 [main] INFO  com.framework.api.client.RestClient - DELETE https://reqres.in/api/users/2
+2026-09-10 12:45:40 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=204, actual=204
+2026-09-10 12:45:40 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testDeleteUser
+2026-09-10 12:45:40 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testGetAllUsers
+2026-09-10 12:45:40 [main] INFO  com.framework.api.client.RestClient - GET https://reqres.in/api/users
+2026-09-10 12:45:40 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=200, actual=200
+2026-09-10 12:45:40 [main] INFO  com.framework.api.validators.ResponseValidator - Key 'data' found with value: [{id=1, email=george.bluth@reqres.in, first_name=George, last_name=Bluth, avatar=https://reqres.in/img/faces/1-image.jpg}, {id=2, email=janet.weaver@reqres.in, first_name=Janet, last_name=Weaver, avatar=https://reqres.in/img/faces/2-image.jpg}, {id=3, email=emma.wong@reqres.in, first_name=Emma, last_name=Wong, avatar=https://reqres.in/img/faces/3-image.jpg}, {id=4, email=eve.holt@reqres.in, first_name=Eve, last_name=Holt, avatar=https://reqres.in/img/faces/4-image.jpg}, {id=5, email=charles.morris@reqres.in, first_name=Charles, last_name=Morris, avatar=https://reqres.in/img/faces/5-image.jpg}, {id=6, email=tracey.ramos@reqres.in, first_name=Tracey, last_name=Ramos, avatar=https://reqres.in/img/faces/6-image.jpg}]
+2026-09-10 12:45:40 [main] INFO  com.framework.api.validators.ResponseValidator - Response time: 313ms (max allowed: 5000ms)
+2026-09-10 12:45:40 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testGetAllUsers
+2026-09-10 12:45:40 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testGetNonExistingUser
+2026-09-10 12:45:40 [main] INFO  com.framework.api.client.RestClient - GET https://reqres.in/api/users/9999
+2026-09-10 12:45:41 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=404, actual=404
+2026-09-10 12:45:41 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testGetNonExistingUser
+2026-09-10 12:45:41 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testGetUserById
+2026-09-10 12:45:41 [main] INFO  com.framework.api.client.RestClient - GET https://reqres.in/api/users/2
+2026-09-10 12:45:43 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=200, actual=200
+2026-09-10 12:45:43 [main] INFO  com.framework.api.validators.ResponseValidator - Validating 'data.id': expected='2', actual='2'
+2026-09-10 12:45:43 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testGetUserById
+2026-09-10 12:45:43 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testGetUsersPage2
+2026-09-10 12:45:43 [main] INFO  com.framework.api.client.RestClient - GET https://reqres.in/api/users?page=2
+2026-09-10 12:45:44 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=200, actual=200
+2026-09-10 12:45:44 [main] INFO  com.framework.api.validators.ResponseValidator - Validating 'page': expected='2', actual='2'
+2026-09-10 12:45:44 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testGetUsersPage2
+2026-09-10 12:45:44 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testPatchUser
+2026-09-10 12:45:44 [main] INFO  com.framework.api.client.RestClient - PATCH https://reqres.in/api/users/2
+2026-09-10 12:45:51 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=200, actual=200
+2026-09-10 12:45:51 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testPatchUser
+2026-09-10 12:45:51 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testUpdateUser
+2026-09-10 12:45:51 [main] INFO  com.framework.api.client.RestClient - PUT https://reqres.in/api/users/2
+2026-09-10 12:45:52 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=200, actual=200
+2026-09-10 12:45:52 [main] INFO  com.framework.api.validators.ResponseValidator - Key 'updatedAt' found with value: 2026-09-10T07:15:51.632Z
+2026-09-10 12:45:52 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testUpdateUser
+2026-09-10 12:45:52 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testLoginMissingPassword
+2026-09-10 12:45:52 [main] INFO  com.framework.api.client.RestClient - POST https://reqres.in/api/login
+2026-09-10 12:45:52 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=400, actual=400
+2026-09-10 12:45:52 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testLoginMissingPassword
+2026-09-10 12:45:52 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testRegisterMissingPassword
+2026-09-10 12:45:52 [main] INFO  com.framework.api.client.RestClient - POST https://reqres.in/api/register
+2026-09-10 12:45:53 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=400, actual=400
+2026-09-10 12:45:53 [main] INFO  com.framework.api.validators.ResponseValidator - Validating 'error': expected='Missing password', actual='Missing password'
+2026-09-10 12:45:53 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testRegisterMissingPassword
+2026-09-10 12:45:53 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testSuccessfulLogin
+2026-09-10 12:45:53 [main] INFO  com.framework.api.client.RestClient - POST https://reqres.in/api/login
+2026-09-10 12:45:54 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=200, actual=200
+2026-09-10 12:45:54 [main] INFO  com.framework.api.validators.ResponseValidator - Key 'token' found with value: QpwL5tke4Pnpja7X4
+2026-09-10 12:45:54 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testSuccessfulLogin
+2026-09-10 12:45:54 [main] INFO  com.framework.listeners.TestListener - TEST STARTED: testSuccessfulRegister
+2026-09-10 12:45:54 [main] INFO  com.framework.api.client.RestClient - POST https://reqres.in/api/register
+2026-09-10 12:45:57 [main] INFO  com.framework.api.validators.ResponseValidator - Validating status code: expected=200, actual=200
+2026-09-10 12:45:57 [main] INFO  com.framework.api.validators.ResponseValidator - Key 'token' found with value: QpwL5tke4Pnpja7X4
+2026-09-10 12:45:57 [main] INFO  com.framework.api.validators.ResponseValidator - Key 'id' found with value: 4
+2026-09-10 12:45:57 [main] INFO  com.framework.listeners.TestListener - TEST PASSED: testSuccessfulRegister
+2026-09-10 12:45:58 [main] INFO  com.framework.listeners.TestListener - ===== Suite finished: Regression Suite =====
+2026-09-10 12:45:59 [main] INFO  com.framework.listeners.ExtentReportManager - Extent report flushed.
