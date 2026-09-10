@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven_3.9'   // Configure this name in Jenkins Global Tool Configuration
-        jdk   'JDK_11'      // Configure this name in Jenkins Global Tool Configuration
-    }
+    //tools {
+       // maven 'Maven_3.9'   // Configure this name in Jenkins Global Tool Configuration
+      //  jdk   'JDK_11'      // Configure this name in Jenkins Global Tool Configuration
+  //  }
 
     parameters {
         choice(name: 'TEST_SUITE',
